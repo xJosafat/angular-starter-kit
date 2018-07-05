@@ -9,6 +9,7 @@
   "author": "Josafat",
   "license": "ISC",
   "dependencies": {
-    "angular": "^1.7.2"
+    "angular": "^1.7.2",
+    "npm": "^6.1.0"
   }
 }
