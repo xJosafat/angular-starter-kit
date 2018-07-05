@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<script src="https://code.angularjs.org/1.2.9/angular.min.js"></script>
+<script>
+    angular.module('myApp', [])
+        .run(function($rootScope){
+            var $scope = $rootScope;
+            $scope.$watch('enabled', function(val) {
+                console.log('You are now: ' + (val ? 'enabled' : 'disabled'));
+            });
+            $scope.enabled = true;
+            $scope.enabled = false;
+            $scope.enabled = 1;
+        })
+</script>
+<body>
+    <p ng-if="enabled">I am here because I'm enabled</p>
+    <button ng-click="enabled=!enabled">Click Me!</button>
+</body>
+</html>
